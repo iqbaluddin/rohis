@@ -1,0 +1,245 @@
+/* Link Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Prompt:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Set Default */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */    
+}
+/* Navbar menu */
+nav
+{
+    position: fixed;
+    height: 55px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 40px;
+    transition: 0.2s;
+    z-index: 9999;
+}
+/* Logo */
+body
+{
+    position: relative;
+    height: 100vh;
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logoImg
+{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;
+}
+.logoImg img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logoText
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    font-weight: 600;
+    color: #333;
+}
+/* .love
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    background: rgb(224,215,16);
+    background: linear-gradient(45deg, rgba(224,215,16,1) 0%, rgba(230,215,44,1) 0%, rgba(203,90,222,1) 100%);
+    -webkit-background-clip: text;-webkit-text-fill-color: transparent;
+} */
+
+/* Menu */
+ul
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-content: center;
+    text-align: right; 
+}
+ul li
+{
+    list-style: none;
+    width: 100%;
+}
+ul li a
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 500;
+    color: #333;   
+}
+ul li a:hover{
+    color: green;
+}
+
+/* Respontsive Nav*/
+@media (max-width: 768px) {
+    nav
+    {
+        position: fixed;
+        padding: 0 20px;               
+    }
+    nav .toggle
+    {
+        content: url('https://api.iconify.design/iconamoon/menu-burger-horizontal.svg?color=%23333&width=35&height=35');
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    nav .awal{
+        position: absolute;
+        right: 20px;
+        bottom: -195px;
+        width: 150px;
+        height: 180px;
+        background-color: #f8f8f8;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(5, 1fr);
+        text-align: left;
+        opacity: 0;     
+        visibility: hidden;
+        transition: 0.5s;         
+    }    
+    nav .awal::before
+    {
+        position: absolute;
+        content: ' ';
+        background: #f8f8f8;
+        width: 15px;
+        height: 15px;
+        top: -7px;
+        right: 20px;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    nav .awal.active
+    {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.5s;
+    }
+    nav .awal li
+    {
+        display: flex;        
+        height: 100%;
+    }
+    nav .awal li a
+    {
+        padding: 0 10px;
+        line-height: 36px;
+        width: 100%;
+        height: 100%;
+    }
+    nav .awal li a:hover
+    {
+        background-color: #f0f0f0;
+    }
+}
+
+/* Beranda */
+.beranda
+{
+    position: relative;
+    padding: 55px 40px 0 40px;
+    min-height: 500px;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.beranda .boxDes
+{
+    position: relative;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    /* background: tomato; */
+}
+.beranda .boxDes h2
+{
+    font-family: 'Prompt', sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 58px;
+    color: #333;
+    text-transform: uppercase;
+}
+.beranda .boxDes p
+{
+    font-size: .9em;
+    font-weight: 400;
+    letter-spacing: .1em;
+    color: #333;
+    
+}
+.benerSatu 
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Respontsive */
+@media (max-width: 768px){
+    .beranda
+    {
+        grid-template-columns: none;
+        padding: 75px 20px 0 20px;
+        width: 100%;        
+    }
+    .benerSatu img
+    {
+        width: 90%;
+        margin: auto;
+    }
+    .beranda .boxDes
+    {
+        gap: 20px;
+    }
+    .beranda .boxDes h2
+    {
+        font-size: 2.5em;
+        line-height: 1.3em;        
+    }
+    .beranda .boxDes p
+    {
+        text-align: center;
+        font-size: .8em;
+        text-align: justify;
+    }
+}
