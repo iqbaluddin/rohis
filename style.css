@@ -20,16 +20,12 @@ nav
     right: 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    align-content: center;
     padding: 0 40px;
     transition: 0.2s;
     z-index: 9999;
 }
 /* Logo */
-body
-{
-    position: relative;
-    height: 100vh;
-}
 .logo
 {
     display: flex;
@@ -62,19 +58,6 @@ body
     font-weight: 600;
     color: #333;
 }
-/* .love
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
-    font-size: 80px;
-    font-weight: 800;
-    background: rgb(224,215,16);
-    background: linear-gradient(45deg, rgba(224,215,16,1) 0%, rgba(230,215,44,1) 0%, rgba(203,90,222,1) 100%);
-    -webkit-background-clip: text;-webkit-text-fill-color: transparent;
-} */
 
 /* Menu */
 ul
@@ -188,7 +171,6 @@ ul li a:hover{
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
-    /* background: tomato; */
 }
 .beranda .boxDes h2
 {
@@ -212,6 +194,7 @@ ul li a:hover{
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* Respontsive */
@@ -241,5 +224,124 @@ ul li a:hover{
         text-align: center;
         font-size: .8em;
         text-align: justify;
+    }
+}
+
+/* Kegiatan */
+.kegiatan
+{
+    position: relative;
+    min-height: 500px;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fafaf9;
+    gap: 30px;
+}
+.kegiatan .ketKg
+{
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    display: grid;
+    gap: 8px;
+}
+.kegiatan .ketKg .judulKg
+{
+    font-family: 'Prompt', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+}
+.kegiatan .ketKg p
+{
+    font-size: .8em;
+    font-weight: 400;
+    color: #333;
+}
+.cartKg
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+    gap: 30px;
+}
+.cartKg .cart
+{
+    position: relative;  
+    max-width: 500px;
+    display: flex;  
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 26px;
+    box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, .1);
+    gap: 8px;
+}
+.cartKg .cart .boxKg
+{
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.cartKg .cart .boxKg img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ketCt
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.ketCt h4
+{
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333;
+}
+.ketCt p
+{
+    font-size: .8em;
+    font-weight: 400;
+    color: #333;
+}
+.ketCt .info
+{
+    color: green;
+}
+
+/* respontsive */
+@media (max-width: 768px){
+    .kegiatan
+    {
+        padding: 40px 20px;
+    }
+    .cartKg
+    {
+        display: grid;
+    }
+    .cartKg .cart
+    {
+        max-width: 100%;
+    }
+    .cartKg .cart .boxKg
+    {
+        width: 200px;
     }
 }
