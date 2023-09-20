@@ -335,6 +335,7 @@ ul li a:hover{
     .cartKg
     {
         display: grid;
+        gap: 10px;
     }
     .cartKg .cart
     {
