@@ -355,7 +355,7 @@ ul li a:hover{
     grid-template-columns: 1fr;
     grid-template-rows: .1fr repeat(2, 1fr);
     padding: 40px;
-    gap: 30px;
+    gap: 80px;
 }
 .judulSt
 {
@@ -389,22 +389,24 @@ ul li a:hover{
 {
     position: relative;
     width: 280px;
-    height: 300px;
+    height: 160px;
     border-radius: 16px;
-    background: #f0f0f0;
     display: grid;
     justify-content: center;
-    align-content: center;
+    align-content: end;
+    gap: 3px;
     padding: 8px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
-    background-color: #f0fdf4;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
     text-align: center;
 }
 .ketuaSt .ketua .imgKt, .imgKt
 {
-    position: relative;
-    width: 180px;
-    height: 180px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
     border-radius: 100%;
     overflow: hidden;
 }
@@ -420,27 +422,94 @@ ul li a:hover{
 .ketuaSt .ketua h2, .seketaris h2
 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.3em;
-    font-weight: 900;
+    font-size: 1em;
+    font-weight: 800;
     color: #333;
-    margin-top: 10px;
     text-transform: uppercase;
 }
-.ketuaSt .ketua p, .seketaris p
+.ketuaSt .ketua p, 
+.seketaris p
 {
-    font-size: 1em;
+    font-size: .8em;
     font-weight: 400;
+    color: #6b7280;
 }
-
+.ketuaSt .ketua a, 
+.seketaris a
+{
+    font-size: 21px;
+    color: rgb(37, 37, 235);
+    opacity: .5;
+    transition: .5s;
+}
+.ketuaSt .ketua a:hover,
+.seketaris a:hover
+{
+    opacity: 1;
+}
 @media (max-width: 768px){
     .struktur
     {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
     .ketuaSt, .instansiSt{
+        display: flex;
+        gap: 80px;
         flex-wrap: wrap;
     }
+}
+
+.kontak
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    background: #333;
+}
+.kontak .ulKt
+{
+    position: relative;
+    display: flex;
+}
+.kontak .ulKt li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.kontak .ulKt li a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kontak .ulKt li a .boxKt
+{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.kontak .ulKt li a .boxKt img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: .5s;
+}
+.kontak .ulKt li a:hover .boxKt img
+{
+    filter: grayscale(0%);
+    color: #fff;
 }
