@@ -231,14 +231,14 @@ ul li a:hover{
 .kegiatan
 {
     position: relative;
-    min-height: 500px;
-    padding: 20px 40px;
+    max-height: 500px;
+    padding: 10px 40px 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #fafaf9;
-    gap: 30px;
+    justify-content: center;
+    gap: 10px;    
 }
 .kegiatan .ketKg
 {
@@ -248,9 +248,8 @@ ul li a:hover{
     display: grid;
     gap: 8px;
 }
-.kegiatan .ketKg .judulKg
+.kegiatan .ketKg h1
 {
-    font-family: 'Prompt', sans-serif;
     font-size: 2em;
     font-weight: 600;
     color: #333;
@@ -261,69 +260,44 @@ ul li a:hover{
     font-weight: 400;
     color: #333;
 }
-.cartKg
+.card
 {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr); */
-    gap: 30px;
-}
-.cartKg .cart
-{
-    position: relative;  
-    max-width: 500px;
-    display: flex;  
-    align-items: center;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 26px;
-    box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, .1);
-    gap: 8px;
-}
-.cartKg .cart .boxKg
-{
-    position: relative;
-    width: 200px;
-    height: 150px;
-    background-color: #f0f0f0;
-    border-radius: 16px;
-    overflow: hidden;
-}
-.cartKg .cart .boxKg img
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.ketCt
-{
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 0;
+    padding: 16px 24px;
+    min-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    gap: 4px;
 }
-.ketCt h4
+.card h1
 {
-    font-size: 1.3em;
-    font-weight: 700;
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
     color: #333;
 }
-.ketCt p
+.card ul
 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;    
+}
+.card ul li
+{
+    position: relative;
     font-size: .8em;
     font-weight: 400;
-    color: #333;
+    color: #334155;
+    padding-left: 20px;
 }
-.ketCt .info
+.card ul li::before
 {
-    color: green;
+    content: url('https://api.iconify.design/gg/check-o.svg?color=%2316a34a&width=16&height=16');
+    position: absolute;
+    top: -50%;
+    left: 0px;
+    transform: translateY(50%);
 }
 
 /* respontsive */
@@ -354,8 +328,9 @@ ul li a:hover{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: .1fr repeat(2, 1fr);
-    padding: 40px;
+    padding: 20px 40px 40px 0;
     gap: 80px;
+    background-color: #fafaf9;
 }
 .judulSt
 {
@@ -512,4 +487,18 @@ ul li a:hover{
 {
     filter: grayscale(0%);
     color: #fff;
+}
+
+/* copyright */
+.copyright
+{
+    text-align: center;
+    background: #333;
+    height: 45px;
+}
+.copyright a
+{
+    color: #fff;
+    line-height: 45px;
+    text-decoration: none;
 }
