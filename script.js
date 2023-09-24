@@ -10,9 +10,9 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     if (document.documentElement.scrollTop > 1) {
       nav.style.background = ('#fff');
-      nav.style.boxShadow = '0px 0 5px rgba(0, 0, 0, .2)';
+      nav.style.boxShadow = '0px 0 5px rgba(0, 0, 0, .2)';      
     } else {
         nav.style.background = '';
-        nav.style.boxShadow = '';
+        nav.style.boxShadow = '';        
     }
   } 
