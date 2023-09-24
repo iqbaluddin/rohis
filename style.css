@@ -296,9 +296,7 @@ ul li a
 {
     content: url('https://api.iconify.design/gg/check-o.svg?color=%2316a34a&width=16&height=16');
     position: absolute;
-    top: -50%;
     left: 0px;
-    transform: translateY(50%);
 }
 
 /* respontsive */
@@ -567,5 +565,9 @@ footer .text
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;        
+    }
+    iframe
+    {
+        width: 90%;
     }
 }
