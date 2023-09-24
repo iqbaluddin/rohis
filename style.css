@@ -328,7 +328,7 @@ ul li a:hover{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: .1fr repeat(2, 1fr);
-    padding: 20px 40px 40px 0;
+    padding: 20px 40px 40px;
     gap: 80px;
     background-color: #fafaf9;
 }
@@ -383,6 +383,7 @@ ul li a:hover{
     width: 120px;
     height: 120px;
     border-radius: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
     overflow: hidden;
 }
 .ketuaSt .ketua .imgKt img, .imgKt img
